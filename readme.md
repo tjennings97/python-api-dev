@@ -75,3 +75,5 @@
 6. Install psycopg2
     - Needed to install Xcode Command Line Tools
         - Computer is old... had to download from Apple Developer Portal... it worked!
+    - For some reason, am able to connect to DB with incorrect password
+        - perhaps check here if it becomes an issue in the future https://www.peterbe.com/plog/connecting-with-psycopg2-without-a-username-and-password

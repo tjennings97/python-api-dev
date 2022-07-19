@@ -11,7 +11,7 @@ from sqlalchemy.orm import Session
 from sqlalchemy.sql.functions import mode
 from . import models
 from .database import engine
-from .routers import post, user
+from .routers import post, user, auth
 
 models.Base.metadata.create_all(bind=engine)
 
@@ -31,6 +31,7 @@ while True:
 
 app.include_router(post.router) #include our post.router
 app.include_router(user.router) #include router object from user file, imports specific routes
+app.include_router(auth.router)
 
 @app.get("/")
 def root():

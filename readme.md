@@ -77,3 +77,11 @@
         - Computer is old... had to download from Apple Developer Portal... it worked!
     - For some reason, am able to connect to DB with incorrect password
         - perhaps check here if it becomes an issue in the future https://www.peterbe.com/plog/connecting-with-psycopg2-without-a-username-and-password
+
+7. Install sqlalchemy
+
+    `pip install sqlalchemy`
+
+8. Install python-jose
+
+    `pip install python-jose[cryptography]`

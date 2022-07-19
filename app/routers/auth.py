@@ -1,7 +1,9 @@
+from os import stat
 from fastapi import APIRouter, Depends, status, HTTPException, Response
 from sqlalchemy.orm import Session
+from starlette.status import HTTP_101_SWITCHING_PROTOCOLS, HTTP_404_NOT_FOUND
 
-from .. import database, schemas, models
+from .. import database, schemas, models, utils
 
 router = APIRouter(tags=['Authentication'])
 
@@ -12,3 +14,9 @@ def login(user_credentials: schemas.UserLogin, db: Session = Depends(database.ge
     if not user:
         raise HTTPException(status_code=status.HTTP_404_NOT_FOUND, detail=f"Invalid Credentials")
     
+    if not utils.verify(user_credentials.password, user.password):
+        raise HTTPException(status_code=status.HTTP_404_NOT_FOUND, detail=f"Invalid Credentials")
+
+    # create a token
+    # return token
+    return {"token": "example token"}

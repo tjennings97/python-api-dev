@@ -1,9 +1,9 @@
-from fastapi import APIRouter, Depends, status, HTTPException, Response
+from fastapi import APIRouter, Depends, HTTPException, Response, status
 from fastapi.security.oauth2 import OAuth2PasswordRequestForm
 from sqlalchemy.orm import Session
 from starlette.status import HTTP_101_SWITCHING_PROTOCOLS, HTTP_404_NOT_FOUND
 
-from .. import database, oauth2, schemas, models, utils
+from .. import database, models, oauth2, schemas, utils
 
 router = APIRouter(tags=['Authentication'])
 

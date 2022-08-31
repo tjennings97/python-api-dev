@@ -4,6 +4,8 @@ from typing import Optional
 from pydantic import BaseModel, EmailStr
 from pydantic.types import conint
 
+from app.database import Base
+
 #schema - definte structure of request & response
 
 class UserCreate(BaseModel):
@@ -42,6 +44,13 @@ class Post(PostBase):
     created_at: datetime
     owner_id: int
     owner: UserOut
+
+    class Config:
+        orm_mode = True
+
+class PostOut(BaseModel):
+    Post: Post
+    votes: int
 
     class Config:
         orm_mode = True

@@ -1,6 +1,16 @@
 __pycache__
 venv/
 .env
-app/__pycache__/
+app/__pycache__
 app/routers/__pycache__
 
+.vscode/settings.json
+app/__pycache__/database.cpython-38.pyc
+app/__pycache__/main.cpython-38.pyc
+app/__pycache__/models.cpython-38.pyc
+app/__pycache__/oauth2.cpython-38.pyc
+app/__pycache__/schemas.cpython-38.pyc
+app/__pycache__/utils.cpython-38.pyc
+app/routers/__pycache__/auth.cpython-38.pyc
+app/routers/__pycache__/post.cpython-38.pyc
+app/routers/__pycache__/user.cpython-38.pyc

@@ -89,3 +89,17 @@
 9. Install python-jose
 
     `pip install python-jose[cryptography]`
+
+10. Install alembic
+
+    `pip install alembic`
+
+    - Create alembic directory
+
+        `alembic init [directory name]`
+    - Create revision file
+
+        `alembic revision -m "message"`
+    - Implement change(revision) to database
+
+        `alembic upgrade [revision number]`

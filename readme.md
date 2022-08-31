@@ -98,8 +98,15 @@
 
         `alembic init [directory name]`
     - Create revision file
-
+    
         `alembic revision -m "message"`
     - Implement change(revision) to database
 
         `alembic upgrade [revision number]`
+    - View latest revision number
+
+        `alembic heads`
+    - Alembic autogenerate database items to match sqlalchemy metadata
+
+        `alembic revision --autogenerate`
+

@@ -110,3 +110,20 @@
 
         `alembic revision --autogenerate`
 
+11. Create heroku account
+
+12. Install heroku
+
+    `brew tap heroku/brew && brew install heroku`
+    `heroku login`
+    `heroku create [app-name]`
+
+13. specify python version
+
+    - create runtime.txt
+    - add python version to it: `python-3.9.131
+
+
+14. Move code to heroku
+
+    `git push heroku master`

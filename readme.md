@@ -127,3 +127,16 @@
 14. Move code to heroku
 
     `git push heroku master`
+
+15. Create postgres database on heroku
+
+    `heroku addons:create heroku-postgresql:hobby-dev`
+
+16. restart heroku app
+
+    `heroku ps:restart`
+
+17. Run alembic on heroku server
+
+    `heroku run "command"`
+    `heroku run "alembic upgrade head"`

@@ -138,5 +138,5 @@
 
 17. Run alembic on heroku server
 
-    `heroku run "command"`
+    `heroku run [command]`
     `heroku run "alembic upgrade head"`
